@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-Am8b9ysO.js";var t=e();function n({text:e}){return e.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g).map((e,n)=>e.startsWith(`**`)?(0,t.jsx)(`strong`,{children:e.slice(2,-2)},n):e.startsWith(`*`)?(0,t.jsx)(`em`,{children:e.slice(1,-1)},n):e)}export{n as t};

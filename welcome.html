@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#14100c">
+<title>Tabor: Walk Through the Bible</title>
+<meta name="description" content="Know your Bible well enough to talk about it with anyone. Five minutes a day.">
+<meta property="og:title" content="Tabor: Walk Through the Bible">
+<meta property="og:description" content="Know your Bible well enough to talk about it with anyone. Five minutes a day.">
+<meta property="og:image" content="https://maxhlove19.github.io/tabor-demo/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="apple-touch-icon" href="./icon-180.png">
+<link rel="stylesheet" href="./fonts.css">
+<style>
+:root{--ground:#14100c;--surface:#1e1812;--ink:#f6eee1;--muted:#d3c6b1;--line:rgb(255 238 210 / .18);--gold:#e6bd6c;--on-gold:#1b150f;
+  --serif:'Source Serif 4',Georgia,serif;--sans:'Figtree',system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font:17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--gold)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.12;margin:0;text-wrap:balance}
+.k{font:700 12.5px/1.4 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+.btn{display:inline-block;background:var(--gold);color:var(--on-gold);font:700 18px/1 var(--sans);text-decoration:none;padding:18px 30px;border-radius:16px}
+.btn:hover{filter:brightness(1.07)}
+
+.hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url(./photos/galilee.jpg) center/cover}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(rgb(16 12 8 / .15),rgb(16 12 8 / .55) 45%,var(--ground) 96%)}
+.hero .wrap{position:relative;z-index:1;width:100%;padding-top:120px;padding-bottom:56px;display:grid;gap:40px;align-items:end}
+.brand{display:flex;align-items:center;gap:12px;font:700 20px/1 var(--serif);margin-bottom:26px}
+.brand img{width:44px;height:44px;border-radius:11px}
+.hero h1{font-size:clamp(40px,8.4vw,76px);max-width:11em;text-shadow:0 2px 24px rgb(0 0 0 / .5)}
+.hero p.lede{font-size:clamp(18px,2.4vw,22px);color:var(--ink);max-width:30em;margin:18px 0 28px;text-shadow:0 1px 10px rgb(0 0 0 / .6)}
+.fine{font-size:14.5px;color:var(--muted);margin:14px 0 0}
+.phone{width:min(300px,70vw);border-radius:38px;border:8px solid #0b0806;box-shadow:0 30px 80px rgb(0 0 0 / .6),0 0 0 1px var(--line);overflow:hidden;background:#000}
+.hero .phone{justify-self:center}
+@media(min-width:860px){.hero .wrap{grid-template-columns:1.25fr .75fr}.hero .phone{justify-self:end}}
+
+section{padding:72px 0}
+section h2{font-size:clamp(30px,5vw,44px);max-width:16em}
+section p.sub{color:var(--muted);max-width:36em;margin:14px 0 0;font-size:18px}
+
+.row{display:grid;gap:36px;align-items:center;padding:36px 0}
+.row .phone{justify-self:center;width:min(270px,66vw)}
+.row h3{font-size:clamp(26px,4vw,34px)}
+.row p{color:var(--muted);margin:12px 0 0;max-width:30em;font-size:18px}
+@media(min-width:760px){.row{grid-template-columns:1fr 1fr;gap:56px}.row:nth-of-type(even) .phone{order:2}}
+
+.also{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:30px;padding:0;list-style:none}
+.also li{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 20px}
+.also b{display:block;font:700 19px/1.25 var(--serif);margin-bottom:4px}
+.also span{color:var(--muted);font-size:16px;line-height:1.5;display:block}
+
+.wont{background:var(--surface);border-block:1px solid var(--line)}
+.wont dl{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:30px 0 0}
+.wont dt{font:700 22px/1.2 var(--serif)}
+.wont dd{margin:6px 0 0;color:var(--muted)}
+
+.how ol{margin:26px 0 0;padding:0;list-style:none;display:grid;gap:14px;max-width:34em;counter-reset:s}
+.how li{counter-increment:s;display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;font-size:18px}
+.how li::before{content:counter(s);width:40px;height:40px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold);display:grid;place-items:center;font:700 17px/1 var(--sans)}
+.how .btn{margin-top:30px}
+
+footer{padding:36px 0 60px;color:var(--muted);font-size:14.5px;border-top:1px solid var(--line)}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="brand"><img src="./icon-192.png" alt="" width="44" height="44">Tabor</div>
+      <h1>Know your Bible well enough to talk about it with anyone.</h1>
+      <p class="lede">One five-minute lesson a day. Or put your shoes on and walk the roads where it happened.</p>
+      <a class="btn" href="./">Open Tabor</a>
+      <p class="fine">Free while we test it. No account. Nothing you write leaves your phone.</p>
+    </div>
+    <img class="phone" src="./shots/today.jpg" alt="Today screen: today's lesson, The Flood, and the verse of the day" width="780" height="1688">
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap">
+    <p class="k">Why this exists</p>
+    <h2>Most people who believe the Bible were never shown how it fits together.</h2>
+    <p class="sub">Tabor walks you through it in order, in plain words, a few minutes at a time. 210 lessons across seven 30-day paths.</p>
+
+    <div class="row">
+      <img class="phone" src="./shots/lesson.jpg" alt="A lesson card telling the story of the flood" width="780" height="1688" loading="lazy">
+      <div>
+        <p class="k">One lesson a day</p>
+        <h3>The story, the thing most people miss, and the honest hard question.</h3>
+        <p>Then three quick questions so it sticks. About five minutes. Read it, or have it read to you.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <img class="phone" src="./shots/walk.jpg" alt="Walk screen with a weekly goal and the Emmaus Road walk" width="780" height="1688" loading="lazy">
+      <div>
+        <p class="k">Walk the Bible</p>
+        <h3>Move along the real roads, and hear the story at every stop.</h3>
+        <p>On a treadmill, outside, or from the couch. Fifteen walks, from Abraham's journey to the seven miles to Emmaus.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <img class="phone" src="./shots/museum.jpg" alt="The Museum: the Merneptah Stele and the Tel Dan Stele" width="780" height="1688" loading="lazy">
+      <div>
+        <p class="k">The Museum</p>
+        <h3>Real things dug out of the ground.</h3>
+        <p>Pilate's name in stone. A fishing boat from the time of Jesus. Each piece is marked Established or Debated, so you always know how sure anyone is.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <img class="phone" src="./shots/group.jpg" alt="With a group: an opening question and the reading for The Flood" width="780" height="1688" loading="lazy">
+      <div>
+        <p class="k">With a group</p>
+        <h3>Any lesson becomes a thirty-minute conversation.</h3>
+        <p>An opening question, the reading, questions for the room and a way to pray together. For a family dinner, two friends or a small group.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="k">Also inside</p>
+    <h2>Everything in one place.</h2>
+    <ul class="also">
+      <li><b>The whole Bible</b><span>Berean Standard Bible, with search, notes and highlights.</span></li>
+      <li><b>The Timeline</b><span>Creation to Revelation, with what the rest of the world was doing.</span></li>
+      <li><b>Myth or Bible?</b><span>Fifty lines everyone quotes. Which are actually in there?</span></li>
+      <li><b>Hard questions</b><span>Answered plainly, with the main views where Christians disagree.</span></li>
+      <li><b>Pray</b><span>A guided prayer, a private journal, and a fasting timer.</span></li>
+      <li><b>Tell someone</b><span>Your story in three minutes and the good news in one.</span></li>
+      <li><b>Memorize</b><span>Verses that stay with you, a few words at a time.</span></li>
+      <li><b>Sunday notes</b><span>The passage, what you heard, and one thing to do this week.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="wont">
+  <div class="wrap">
+    <p class="k">What you won't find</p>
+    <h2>Built the way we'd want it built for us.</h2>
+    <dl>
+      <div><dt>No ads. Ever.</dt><dd>Nothing is being sold to you while you read.</dd></div>
+      <div><dt>No account.</dt><dd>Your notes and prayers stay on your phone.</dd></div>
+      <div><dt>No guilt.</dt><dd>No streaks to lose and no mascot nagging you.</dd></div>
+      <div><dt>No pretending.</dt><dd>Nothing is presented as proven when it isn't.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <p class="k">Put it on your phone</p>
+    <h2>It takes about twenty seconds.</h2>
+    <ol>
+      <li>Open Tabor in Safari on your iPhone (Chrome on Android).</li>
+      <li>Tap Share, then Add to Home Screen.</li>
+      <li>Open it from your Home Screen like any other app.</li>
+    </ol>
+    <a class="btn" href="./">Open Tabor</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    Tabor is a test version. Scripture: Berean Standard Bible. Scenes are artist's reconstructions.
+    <a href="./privacy.html">Privacy</a> · <a href="./terms.html">Terms</a>
+  </div>
+</footer>
+</body>
+</html>
